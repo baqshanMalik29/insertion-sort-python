@@ -1,0 +1,16 @@
+#insertion sort
+arr = [1,2,5,23,88,43,21,65,32]
+def insertionsort():
+    for blue in range (1, len(arr)):
+        for black in range (0, blue -1):
+            if arr[blue] < arr[black]:
+                temp = arr[blue]
+                for RevP in range(blue, black, -1):
+                    arr[RevP] = arr[RevP -1]
+                arr[blue] = temp
+                break
+
+
+print("Before sorting: ", arr)
+insertionsort()
+print("After sorting: ", arr)
